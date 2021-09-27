@@ -1,2 +1,2 @@
-# YOUR PROJECT NAME
-Your project description.
+# taskMate
+Improve uppon the current tasking and chat application for in-store associates and managers. The goal is a more streamlined and fun UI with well managed data and functionalities on the backend.
