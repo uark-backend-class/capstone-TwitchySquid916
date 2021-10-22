@@ -37,6 +37,6 @@ app.use(express.urlencoded());
 app.use(express.static("./public"));
 app.use(routes);
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
   console.log("Now listening on port 3000");
 });
