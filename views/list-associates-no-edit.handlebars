@@ -1,0 +1,44 @@
+<body>  
+<style>
+body {
+  background-image: url("/img/backgroundTaskMate.jfif") ;
+}
+</style>
+
+
+{{!-- inline style --}}
+<h1 style="color:whitesmoke">{{ title }} <img src="/img/sparkUser.png" width= 5% height=5% margin="40px" /> </h1>
+
+<table id="associateTable" class="table">
+  <thead>
+    <tr>
+      {{!-- apply style classes to elements --}}
+      <th style="color:orangered ; font-size:2rem">Name</th>
+      <th style="color:orangered ; font-size:2rem ">Team</th> 
+      <th style="color:orangered ; font-size:2rem ">Task</th>
+      <!-- <th>Manager</th> -->
+    </tr>
+  </thead>
+  <tbody>
+    {{#each associates}}
+      <tr>
+        <td style="color:orangered ; font-size:2rem"><strong>{{ this.firstName }} {{ this.lastName }} </strong></td>
+        <td style="color:orangered; font-size:2rem "><strong>{{ this.team }} </strong></td>
+        <td style="color:orangered; font-size:2rem  "><strong>{{ this.task }} </strong></td>
+        <!-- <td><strong>{{ this.found}}</strong></td> -->
+        {{/each}}
+        
+        
+      </tr>
+   
+  </tbody>
+</table>
+
+<a class="btn btn-warning btn" href="/associateLogout">Log Out</a>
+<br>
+<!--
+{{#each lead}}
+<a class="btn btn-danger btn" href="/deleteAcct/ {{ this._id}}">Delete Account</a>
+{{/each}} -->
+</body>
+

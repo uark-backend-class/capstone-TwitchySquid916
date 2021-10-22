@@ -1,0 +1,30 @@
+<body>
+    <style>
+body {
+  background-image: url("/img/backgroundTaskMate.jfif") ;
+}
+</style>
+
+{{#each errorMessages}}
+<div class="alert alert-danger" style="margin-top: 15px">
+{{this}}
+</div>
+{{/each}}
+<h3>taskMate</h3>
+<form action="/login" method="post">
+    User Name
+    <input class="form-control" type="text" name="name" id="name" placeholder="taskMate User Name">
+    Password
+    <input class="form-control" type="passowrd" name="password" id="password" placeholder="Password">
+    <br>
+    <input type="checkbox" required> I am a manager or higher
+    <br>
+    <button class="btn btn-primary" type="submit">Login</button>
+    <br>
+    <button class="btn btn-secondary"> <a href="/register"> Sign Up</a></button> 
+    <br>
+    <button class="btn btn-warning"><a href="/associateTasks">Associates get your task</a></button>
+
+</form>
+
+</body>

@@ -1,0 +1,25 @@
+<body>
+<style>
+body {
+  background-image: url("/img/sparkUser.png") ;
+}
+</style>
+
+<h1>{{ title }}</h1>
+
+<form action="/updateAssociate" method="POST">
+  <div class="form-group">
+    <label for="firstName">First Name</label>
+    <input type="text" class="form-control" name="firstName" value="{{ associate.firstName }}" /><br />
+    <label for="lastName">Last Name</label>
+    <input type="text" class="form-control" name="lastName" value="{{ associate.lastName }}" /><br />
+    <label for="team">Team</label>
+    <input type="text" class="form-control" name="team" value="{{ associate.team }}" /><br />
+    <label for="task">Task</label>
+    <input type="text" class="form-control" name="task" value="{{ associate.task }}" /><br />
+    <button class="btn btn-success" type="submit">Submit</button>
+  </div>
+  <input type="hidden" name="id" value="{{ associate._id }}" />
+</form>
+
+</body>

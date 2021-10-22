@@ -1,0 +1,43 @@
+<body>  
+<style>
+body {
+  background-image: url("/img/backgroundTaskMate.jfif") ;
+}
+</style>
+
+
+{{!-- inline style --}}
+<h1>{{ title }} <img src="/img/sparkUser.png" width= 5% height=5% margin="40px" /> {{name}} </h1>
+<a class="btn btn-success" href="/addAssociate">Add Task</a>
+<table id="associateTable" class="table">
+  <thead>
+    <tr>
+      {{!-- apply style classes to elements --}}
+      <th class="green bg-yellow">Name</th>
+      <th class="green bg-yellow">Team</th> 
+      <th>Task</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each associates}}
+      <tr>
+        <td><strong>{{ this.firstName }} {{ this.lastName }} </strong></td>
+        <td><strong>{{ this.team }} </strong></td>
+        <td><strong>{{ this.task }} </strong></td>
+        <td>
+          <a class="btn btn-default btn" href="/update/{{ this._id }}">edit</a>
+          <a class="btn btn-danger btn" href="/delete/{{ this._id }}">delete</a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+<a class="btn btn-warning btn" href="/logout{{ this._id }}">Log Out</a>
+<br>
+<!--
+{{#each lead}}
+<a class="btn btn-danger btn" href="/deleteAcct/ {{ this._id}}">Delete Account</a>
+{{/each}} -->
+</body>

@@ -1,0 +1,22 @@
+h1 {
+  color: blue;            /* all headers blue*/
+}
+
+a {
+  color: green;          /* all links green*/
+}
+
+.green {
+  color: green;
+}
+
+.bg-yellow {                    /* use class="bg yellow" */
+  background-color: yellow;
+}
+
+#studentTable {           /* use id="studentTable" */
+  width: 100%;
+  background-color:aqua;
+  border: 5px solid purple;
+  margin-top: 10px; 
+}

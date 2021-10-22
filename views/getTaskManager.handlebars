@@ -1,0 +1,36 @@
+<body>  
+<style>
+body {
+  background-image: url("/img/backgroundTaskMate.jfif") ;
+}
+</style>
+
+
+{{!-- inline style --}}
+<h1>Select Your Manager<img src="/img/sparkUser.png" width= 5% height=5% margin="40px" /></h1>
+<h1>{{ title }}</h1>
+
+<table id="managerTable" class="table">
+  <thead>
+    <tr>
+      {{!-- apply style classes to elements --}}
+      <th class="green bg-yellow">Name</th>
+      
+      <th></th>
+    </tr>
+  </thead>
+  <tbody> 
+    {{#each leads}}
+      <tr>
+        <td><strong>{{ this.name}} </strong></td>
+        <td>
+          <a class="btn btn-success" href="/getTask">select</a>
+          
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+
+</body>
