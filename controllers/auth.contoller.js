@@ -39,10 +39,14 @@ exports.termsOfService = (req,res) =>{
 
 
 exports.associateTasks = async (req,res) =>{
-    const associates = await Associate.find().lean();
-    const {user} = await Associate;
+    const associates = await Associate.find().populate("user").lean();
+
+    console.log(associates);
+    //const {user} = await Associate;
+    let user = {};
     //get object id off of Lead
-    //const lead = await Lead.findOne({_id})
+    //let lead = await Lead.findById({_id});
+    //let leader = (user.toString() === lead.toString());
     //console.log(lead);
 
     // f(x) to see if {user} = lead id

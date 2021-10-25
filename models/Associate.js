@@ -9,7 +9,7 @@ const associateSchema = mongoose.Schema({
   task: String,
   user: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "Lead"
+    ref: "lead"
   }
 });
 
