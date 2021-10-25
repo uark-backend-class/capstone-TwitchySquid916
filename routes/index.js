@@ -18,7 +18,7 @@ router.get("/listAssociates",  associate.listAssociatesPage);
 router.get("/addAssociate",  associate.addUpdateAssociatePage);
 router.get("/update/:id", associate.addUpdateAssociatePage);
 router.get("/delete/:id", associate.delete);
-//router.get("/deleteAcct/:id", associate.deleteLeadAcct);
+router.get("/deleteAcct", associate.deleteLeadAcct);
 router.post("/updateAssociate", associate.updateAssociate);
 router.get("/secrets", (req, res) => res.redirect("/listAssociates"));
 router.get("/logout", auth.logout);

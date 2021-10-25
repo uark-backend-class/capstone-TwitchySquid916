@@ -40,10 +40,15 @@ exports.termsOfService = (req,res) =>{
 
 exports.associateTasks = async (req,res) =>{
     const associates = await Associate.find().lean();
-    /*const lead = await Lead._id.ObjectId().str;
-    const associate = await Associate.user.ObjectId().str;
-    const found = (lead === associate)*/
-    res.render("list-associates-no-edit", { title: "All Associates Task List", associates, /*found*/ });
+    const {user} = await Associate;
+    //get object id off of Lead
+    //const lead = await Lead.findOne({_id})
+    //console.log(lead);
+
+    // f(x) to see if {user} = lead id
+    // if so parse through the name of the lead
+
+    res.render("list-associates-no-edit", { title: "All Associates Task List", associates, user });
 }
 
 

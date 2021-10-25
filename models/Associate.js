@@ -4,7 +4,7 @@ const Lead = require("./Lead");
 // Create our student schema
 const associateSchema = mongoose.Schema({
   firstName: String,
-  lastName: String,
+  lastName: String, 
   team: String,
   task: String,
   user: {

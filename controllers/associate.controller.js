@@ -49,7 +49,7 @@ exports.delete = async (req, res) => {
   res.redirect("/listAssociates");
 }
 
-/*exports.deleteLeadAcct = async (req,res) => {
-  await Lead.findByIdAndDelete(req.params.id);
+exports.deleteLeadAcct = async (req,res) => {
+  await Lead.findByIdAndDelete(req.user._id);
   res.redirect("/login");
-} */
+} 
