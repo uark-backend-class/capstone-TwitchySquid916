@@ -40,8 +40,6 @@ exports.termsOfService = (req,res) =>{
 
 exports.associateTasks = async (req,res) =>{
     const associates = await Associate.find().populate("user").lean();
-
-    console.log(associates);
     //const {user} = await Associate;
     let user = {};
     //get object id off of Lead
@@ -52,7 +50,7 @@ exports.associateTasks = async (req,res) =>{
     // f(x) to see if {user} = lead id
     // if so parse through the name of the lead
 
-    res.render("list-associates-no-edit", { title: "All Associates Task List", associates, user });
+    res.render("list-associates-no-edit", { title: "All Associates Task List", associates, user }); 
 }
 
 

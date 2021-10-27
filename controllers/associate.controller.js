@@ -50,6 +50,9 @@ exports.delete = async (req, res) => {
 }
 
 exports.deleteLeadAcct = async (req,res) => {
+  let lead = await Lead.findById(req.user._id);
+  await Associate.deleteMany({ user: req.user._id });
   await Lead.findByIdAndDelete(req.user._id);
+   
   res.redirect("/login");
 } 
